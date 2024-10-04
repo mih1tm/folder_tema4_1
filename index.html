@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tema4_1</title>
+</head>
+
+<body>
+    
+    <input type="number" id="input_number">
+    <button style="font-size: 40px;" id="button_1" onclick="add_in_array()">add</button>
+    <br><br>
+    <button style="font-size: 40px;" id="check_max" onclick="checkmax()">CheckMax</button>
+    <br><br>
+    <button style="font-size: 40px;" id="Sum" onclick="sum()">Sum</button>
+
+</body>
+
+<script>
+     let array_one=[]
+     i=0
+
+    function add_in_array(){
+       
+        let x =0
+        x = Number(document.getElementById("input_number").value)
+        
+        array_one[i]= x
+        i++
+        console.log(array_one)
+    }
+
+    let suma = 0
+
+    function sum(){
+        for(i = 0 ; i < array_one.length; i++){
+        x = array_one[i]
+        suma = x + suma
+        
+        }
+        console.log(suma)
+
+    }
+
+    function checkmax(){
+        let max = Math.max(...array_one);
+    console.log(max);
+    }
+
+    
+</script>
+</html>
