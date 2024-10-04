@@ -14,11 +14,14 @@
     <button style="font-size: 40px;" id="check_max" onclick="checkmax()">CheckMax</button>
     <br><br>
     <button style="font-size: 40px;" id="Sum" onclick="sum()">Sum</button>
+    <br><br>
+    <button style="font-size: 40px;" id="checkmin" onclick="checkmin()">CheckMin</button>
 
     <p id="zona_print_checkmax"></p>
     <br>
-    
     <p id="zona_print_sum"></p>
+    <br>
+    <p id="zona_print_checkmin"></p>
     
 
 </body>
@@ -56,8 +59,10 @@
         document.getElementById("zona_print_checkmax").innerHTML= "Cel mai mare numar este: " + max_array_one
     }
 
-    function clear_input(){
-
+    function checkmin(){
+        let min_array_one = Math.min(...array_one);
+        console.log(min_array_one)
+        document.getElementById("zona_print_checkmin").innerHTML= "Cel mai mic numar este: " + min_array_one
     }
 
     
