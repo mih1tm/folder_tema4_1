@@ -11,11 +11,11 @@
     <input type="number" id="input_number">
     <button style="font-size: 40px;" id="button_1" onclick="add_in_array()">add</button>
     <br><br>
-    <button style="font-size: 40px;" id="check_max" onclick="checkmax()">CheckMax</button>
+    <button style="font-size: 40px;" id="check_max" onclick="mycheckmax()">CheckMax</button>
     <br><br>
     <button style="font-size: 40px;" id="Sum" onclick="sum()">Sum</button>
     <br><br>
-    <button style="font-size: 40px;" id="checkmin" onclick="checkmin()">CheckMin</button>
+    <button style="font-size: 40px;" id="checkmin" onclick="mycheckmin()">CheckMin</button>
 
     <p id="zona_print_checkmax"></p>
     <br>
@@ -53,7 +53,7 @@
         document.getElementById("zona_print_sum").innerHTML= "Suma: " + suma
     }
 
-    function checkmax(){
+    /*function checkmax(){
         let max_array_one = Math.max(...array_one);
         console.log(max_array_one)
         document.getElementById("zona_print_checkmax").innerHTML= "Cel mai mare numar este: " + max_array_one
@@ -63,8 +63,34 @@
         let min_array_one = Math.min(...array_one);
         console.log(min_array_one)
         document.getElementById("zona_print_checkmin").innerHTML= "Cel mai mic numar este: " + min_array_one
+    }*/
+
+    function mycheckmax(){
+        
+        let max = array_one[0]
+
+        for(i = 0; i<array_one.length; i++){
+            if(array_one[i] > max){
+                max = array_one[i]
+            }
+            
+        }
+        console.log(array_one)
+        document.getElementById("zona_print_checkmax").innerHTML= "Cel mai mare numar este: " + max
+        console.log(max)
     }
 
-    
+    function mycheckmin(){
+        
+        let min = array_one[0]
+
+        for(i = 0; i<array_one.length; i++){
+            if(array_one[i] < min){
+                min = array_one[i]
+            }
+        }
+        document.getElementById("zona_print_checkmin").innerHTML= "Cel mai mic numar este: " + min
+        console.log(min)
+    }
 </script>
 </html>
